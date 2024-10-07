@@ -1,15 +1,13 @@
+// FileRead.cpp
+#include "FileRead.h"
 #include <iostream>
 #include <fstream>
-#include <string>
 #include <sstream>
-#include <set>
 #include <iomanip>
-#include "FileRead.h"
 
 using namespace std;
 
 FileRead::FileRead(const string& FileName) {
-    set<double> uniqueValues;
     ifstream myFile(FileName);
     if (myFile.is_open()) {
         string line;
@@ -30,12 +28,8 @@ FileRead::FileRead(const string& FileName) {
     else {
         cerr << "Unable to open file: " << FileName << endl;
     }
-
-    cout << fixed << setprecision(6);
-    for (const auto& value : uniqueValues) {
-        cout << value << " ";
-    }
-    cout << endl;
 }
 
-FileRead::~FileRead() {}
+const set<double>& FileRead::getUniqueValues() const {
+    return uniqueValues;
+}
