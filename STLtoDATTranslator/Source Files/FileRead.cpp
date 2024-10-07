@@ -3,28 +3,39 @@
 #include <string>
 #include <sstream>
 #include <set>
+#include <iomanip>
 #include "FileRead.h"
 
-FileRead::FileRead(const std::string& FileName) {
-    std::string data;
-    std::ifstream myFile(FileName);
+using namespace std;
+
+FileRead::FileRead(const string& FileName) {
+    set<double> uniqueValues;
+    ifstream myFile(FileName);
     if (myFile.is_open()) {
-        std::string line;
-        while (std::getline(myFile, line)) {
-            if (line.find("vertex") != std::string::npos) {
+        string line;
+        while (getline(myFile, line)) {
+            if (line.find("vertex") != string::npos) {
                 size_t pos = line.find("vertex");
-                std::istringstream iss(line.substr(pos + 7));
+                istringstream iss(line.substr(pos + 7));
                 double x, y, z;
                 if (iss >> x >> y >> z) {
-                    std::cout << x << " " << y << " " << z << std::endl;
+                    uniqueValues.insert(x);
+                    uniqueValues.insert(y);
+                    uniqueValues.insert(z);
                 }
             }
         }
         myFile.close();
     }
     else {
-        std::cerr << "Unable to open file: " << FileName << std::endl;
+        cerr << "Unable to open file: " << FileName << endl;
     }
+
+    cout << fixed << setprecision(6);
+    for (const auto& value : uniqueValues) {
+        cout << value << " ";
+    }
+    cout << endl;
 }
 
 FileRead::~FileRead() {}
