@@ -9,10 +9,10 @@ int main() {
     string FileName = "cube.stl";
     FileRead fr(FileName);
 
-    const auto& uniqueValues = fr.getUniqueValues();
+    const auto& points = fr.getPoints();
     cout << fixed << setprecision(6); 
-    for (const auto& value : uniqueValues) {
-        cout << value << endl;
+    for (const auto& point : points) {
+        cout << point.x << " " << point.y << " " << point.z << endl;
     }
 
     return 0;

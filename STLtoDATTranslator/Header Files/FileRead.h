@@ -3,15 +3,16 @@
 #define FILEREAD_H
 
 #include <string>
-#include <set>
+#include <vector>
+#include "Point.h"
 
 using namespace std;
 
 class FileRead {
 public:
+    vector<Point> points;
     FileRead(const string& FileName);
-    const set<double>& getUniqueValues() const;
-    set<double> uniqueValues;
+    const vector<Point>& getPoints() const;
 };
 
 #endif // FILEREAD_H

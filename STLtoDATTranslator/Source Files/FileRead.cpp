@@ -1,9 +1,7 @@
-// FileRead.cpp
 #include "FileRead.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <iomanip>
 
 using namespace std;
 
@@ -17,19 +15,16 @@ FileRead::FileRead(const string& FileName) {
                 istringstream iss(line.substr(pos + 7));
                 double x, y, z;
                 if (iss >> x >> y >> z) {
-                    uniqueValues.insert(x);
-                    uniqueValues.insert(y);
-                    uniqueValues.insert(z);
+                    points.emplace_back(x, y, z);
                 }
             }
         }
         myFile.close();
-    }
-    else {
+    } else {
         cerr << "Unable to open file: " << FileName << endl;
     }
 }
 
-const set<double>& FileRead::getUniqueValues() const {
-    return uniqueValues;
+const vector<Point>& FileRead::getPoints() const {
+    return points;
 }

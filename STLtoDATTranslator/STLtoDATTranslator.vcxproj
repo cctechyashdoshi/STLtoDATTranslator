@@ -133,9 +133,11 @@
   <ItemGroup>
     <ClCompile Include="Source Files\FileRead.cpp" />
     <ClCompile Include="Source Files\STLtoDATTranslator.cpp" />
+    <ClCompile Include="Source Files\Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header Files\FileRead.h" />
+    <ClInclude Include="Header Files\Triangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

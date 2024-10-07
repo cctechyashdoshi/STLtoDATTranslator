@@ -24,9 +24,15 @@
     <ClCompile Include="Source Files\STLtoDATTranslator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source Files\Triangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header Files\FileRead.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header Files\Triangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
