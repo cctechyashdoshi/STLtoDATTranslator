@@ -10,7 +10,7 @@ Read::Read()
 }
 
 void Read::read() {
-    ifstream myFile("sphere.stl");
+    ifstream myFile("cube.stl");
 
     if (myFile.is_open()) {
         while (getline(myFile, line)) {
