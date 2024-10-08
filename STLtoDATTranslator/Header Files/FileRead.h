@@ -1,14 +1,16 @@
 #pragma once
 
-#include <string>
-#include <vector>
-#include "Point.h"
+#include<iostream>
+#include<string>
+#include<fstream>
+#include<iostream>
 
 using namespace std;
 
-class FileRead {
+class Read {
 public:
-    vector<Point> points;
-    FileRead(const string& FileName);
-    const vector<Point>& getPoints() const;
+    Read();
+    string line, data;
+    void read();
+    ~Read();
 };
