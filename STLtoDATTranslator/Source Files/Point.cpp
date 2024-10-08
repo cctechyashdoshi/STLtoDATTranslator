@@ -1,10 +1,14 @@
-#include <Point.h>
+#include "point.h"
 
-using namespace std;
 
-class Point {
-    public:
-        double x, y, z;
-        Point(double x, double y, double z) : x(x), y(y), z(z) {}
-        ~Point() {}
-};
+
+Point::Point(int x, int y, int z)
+{
+	this->x = x;
+	this->y = y;
+	this->z = z;
+}
+
+Point::~Point()
+{
+}
