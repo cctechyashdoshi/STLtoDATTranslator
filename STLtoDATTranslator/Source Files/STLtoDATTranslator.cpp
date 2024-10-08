@@ -1,20 +1,21 @@
-#include <iostream>
-#include <iomanip>
-#include "FileRead.h"
-#include <string>
+#include "read.h"
+#include<fstream>
+#include "triangulation.h"
+#include "write.h"
 
 using namespace std;
 
 int main() {
-    string FileName = "cube.stl";
-    FileRead fr(FileName);
+    Read reader;
+    reader.read();
 
-    const auto& points = fr.getPoints();
-    cout << fixed << setprecision(6); 
-    for (const auto& point : points) {
-        cout << point.x << " " << point.y << " " << point.z << endl;
-    }
+    Triangulation triangulation;
+    triangulation.processString(reader.data);
+
+    vector<Triangle> triangles = triangulation.createTriangles(reader.data);
+
+    Write writer;
+    writer.writeFile("output.dat", triangles, triangulation.uniqueVertices);
 
     return 0;
 }
-
