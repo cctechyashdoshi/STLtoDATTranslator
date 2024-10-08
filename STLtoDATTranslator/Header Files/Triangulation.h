@@ -2,7 +2,7 @@
 #include<vector>
 #include<unordered_map>
 #include<sstream>
-#include "triangle.h"
+#include "Triangle.h"
 
 using namespace std;
 
