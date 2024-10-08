@@ -1,30 +1,32 @@
-#include "FileRead.h"
+#include "read.h"
 #include <iostream>
 #include <fstream>
-#include <sstream>
+#include <string>
 
 using namespace std;
 
-FileRead::FileRead(const string& FileName) {
-    ifstream myFile(FileName);
+Read::Read()
+{
+}
+
+void Read::read() {
+    ifstream myFile("sphere.stl");
+
     if (myFile.is_open()) {
-        string line;
         while (getline(myFile, line)) {
             if (line.find("vertex") != string::npos) {
-                size_t pos = line.find("vertex");
-                istringstream iss(line.substr(pos + 7));
-                double x, y, z;
-                if (iss >> x >> y >> z) {
-                    points.emplace_back(x, y, z);
-                }
+                int pos = line.find("vertex");
+                data += line.substr(pos + 7);
+                data += ' ';
             }
         }
         myFile.close();
-    } else {
-        cerr << "Unable to open file: " << FileName << endl;
+    }
+    else {
+        cout << "Unable to open file" << endl;
     }
 }
 
-const vector<Point>& FileRead::getPoints() const {
-    return points;
+Read::~Read()
+{
 }
