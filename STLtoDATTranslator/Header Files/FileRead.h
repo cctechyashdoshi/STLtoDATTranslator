@@ -1,6 +1,4 @@
-// FileRead.h
-#ifndef FILEREAD_H
-#define FILEREAD_H
+#pragma once
 
 #include <string>
 #include <vector>
@@ -14,5 +12,3 @@ public:
     FileRead(const string& FileName);
     const vector<Point>& getPoints() const;
 };
-
-#endif // FILEREAD_H
