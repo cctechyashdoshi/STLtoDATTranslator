@@ -4,7 +4,7 @@ using namespace std;
 
 class Point {
     public:
-        double x, y, z;
-        Point(double x, double y, double z) : x(x), y(y), z(z) {}
+        int x, y, z;
+        Point(int x, int y, int z) : x(x), y(y), z(z) {}
         ~Point() {}
 };
