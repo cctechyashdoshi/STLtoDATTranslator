@@ -8,10 +8,10 @@
 using namespace std;
 
 class Read {
+string line, data;
 public:
     Read();
-    string line, data;
-    void read();
+    string read();
     ~Read();
 };
 
