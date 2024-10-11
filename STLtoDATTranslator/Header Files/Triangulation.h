@@ -7,12 +7,14 @@
 using namespace std;
 
 class Triangulation {
-public:
     vector<double> uniqueVertices;
     unordered_map<double, int> vertexIndexMap;  
-
-    void processString(const string& data);
-    vector<Triangle> createTriangles(const string& data); 
+public:
+    std::vector<double> getUniqueVertices() {
+        return uniqueVertices;
+    }
+    void processString(const std::string& data);
+    vector<Triangle> createTriangles(const std::string& data); 
 };
 
 
