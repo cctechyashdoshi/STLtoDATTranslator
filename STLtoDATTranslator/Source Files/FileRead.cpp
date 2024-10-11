@@ -9,7 +9,7 @@ Read::Read()
 {
 }
 
-void Read::read() {
+string Read::read() {
     ifstream myFile("cube.stl");
 
     if (myFile.is_open()) {
