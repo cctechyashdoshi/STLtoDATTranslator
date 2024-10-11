@@ -7,15 +7,15 @@ using namespace std;
 
 int main() {
     Read reader;
-    reader.read();
+    string input =reader.read();
 
     Triangulation triangulation;
-    triangulation.processString(reader.data);
+    triangulation.processString(input);
 
-    vector<Triangle> triangles = triangulation.createTriangles(reader.data);
+    vector<Triangle> triangles = triangulation.createTriangles(input);
 
     Write writer;
-    writer.writeFile("output.dat", triangles, triangulation.uniqueVertices);
+    writer.writeFile("output.dat", triangles, triangulation.uniqueVertices());
 
     return 0;
 }
