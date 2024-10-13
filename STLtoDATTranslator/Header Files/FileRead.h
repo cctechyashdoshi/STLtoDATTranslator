@@ -4,16 +4,10 @@
 #include<string>
 #include<fstream>
 
-using namespace std;
-
 class Read {
-string line, data;
+std::string line, data;
 public:
     Read();
-    string read();
+    std::string read();
     ~Read();
 };
-
-
-
-
