@@ -9,13 +9,10 @@ using namespace std;
 class Triangulation {
     vector<double> uniqueVertices;
     unordered_map<double, int> vertexIndexMap;  
+    vector<Triangle> triangles;
 public:
-    std::vector<double> getUniqueVertices() {
-        return uniqueVertices;
-    }
+    std::vector<double> getUniqueVertices();
     void processString(const std::string& data);
+    vector<Triangle> getTriangles();
     vector<Triangle> createTriangles(const std::string& data); 
 };
-
-
-
