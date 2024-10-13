@@ -1,13 +1,11 @@
 #include "FileRead.h"
 
-Read::Read(){};
+#define FILENAME "cube.stl"
+
+Read::Read() {};
 
 std::string Read::read() {
-    std::string fileName;
-    std::cout << "Enter the name of file without .stl part" << std::endl;
-    std::cin >> fileName;
-    fileName += ".stl";
-    std::ifstream infile(fileName);
+    std::ifstream infile(FILENAME);
     assert(infile.is_open());
     std::string line;
     while (getline(infile, line)) {
@@ -25,4 +23,4 @@ std::string Read::read() {
     return data;
 };
 
-Read::~Read(){};
+Read::~Read() {};
