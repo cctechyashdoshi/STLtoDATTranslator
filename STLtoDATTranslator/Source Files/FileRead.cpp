@@ -1,4 +1,6 @@
 #include "FileRead.h"
+#include <cassert>
+#include <sstream>
 
 #define FILENAME "cube.stl"
 
