@@ -1,24 +1,18 @@
-#include "FileRead.h"
-#include<fstream>
-#include "Triangulation.h"
 #include "FileWrite.h"
-
-using namespace std;
+#include "FileRead.h"
+#include "Triangulation.h"
+#include <string>
 
 int main() {
-    FileRead reader;
-    string input =reader.read();
+    Read reader;
+    std::string input = reader.read();
 
     Triangulation triangulation;
     triangulation.processString(input);
+    triangulation.createTriangles(input);
 
-    vector<Triangle> triangles = triangulation.createTriangles(input);
-
-    FileWrite writer;
-    writer.writeFile("output.dat", triangles, triangulation.uniqueVertices());
+    Write writer;
+    writer.writeFile("output.dat", triangulation.getTriangles(), triangulation.getUniqueVertices());
 
     return 0;
 }
-
-
-
