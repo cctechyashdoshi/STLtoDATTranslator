@@ -1,32 +1,26 @@
 #include "FileRead.h"
-#include <iostream>
-#include <fstream>
-#include <string>
 
-using namespace std;
+#define FILENAME "cube.stl"
 
-Read::Read()
-{
-}
+Read::Read() {};
 
-void Read::read() {
-    ifstream myFile("cube.stl");
-
-    if (myFile.is_open()) {
-        while (getline(myFile, line)) {
-            if (line.find("vertex") != string::npos) {
-                int pos = line.find("vertex");
-                data += line.substr(pos + 7);
-                data += ' ';
+std::string Read::read() {
+    std::ifstream infile(FILENAME);
+    assert(infile.is_open());
+    std::string line;
+    while (getline(infile, line)) {
+        std::stringstream ss(line);
+        std::string word;
+        while (ss >> word) {
+            if (word == "vertex") {
+                std::string x, y, z;
+                ss >> x >> y >> z;
+                assert(!x.empty() && !y.empty() && !z.empty());
+                data += x + " " + y + " " + z + " ";
             }
         }
-        myFile.close();
     }
-    else {
-        cout << "Unable to open file" << endl;
-    }
-}
+    return data;
+};
 
-Read::~Read()
-{
-}
+Read::~Read() {};

@@ -3,17 +3,11 @@
 #include<iostream>
 #include<string>
 #include<fstream>
-#include<iostream>
-
-using namespace std;
 
 class Read {
+std::string line, data;
 public:
     Read();
-    string line, data;
-    void read();
+    std::string read();
     ~Read();
 };
-
-
-

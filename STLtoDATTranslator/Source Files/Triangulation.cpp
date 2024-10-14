@@ -1,8 +1,11 @@
 #include "Triangulation.h"
 
-void Triangulation::processString(const string& data)
-{
-    istringstream iss(data);
+std::vector<double> Triangulation::getUniqueVertices(){return uniqueVertices;};
+
+std::vector<Triangle> Triangulation::triangulizationDataStructure(){return triangles;};
+
+void Triangulation::processString(const string& data){
+    std::istringstream iss(data);
     double value;
     int currentIndex = 0;
 
@@ -13,15 +16,14 @@ void Triangulation::processString(const string& data)
             currentIndex++;
         }
     }
-}
+};
 
-vector<Triangle> Triangulation::createTriangles(const string& data)
-{
+vector<Triangle> Triangulation::createTriangles(const std::string& data){
     vector<Triangle> triangles;
     istringstream iss(data);
     vector<int> indices;
-
     double val;
+    
     while (iss >> val) {
         indices.push_back(vertexIndexMap[val]);
 
@@ -34,4 +36,4 @@ vector<Triangle> Triangulation::createTriangles(const string& data)
         }
     }
     return triangles;
-}
+};
