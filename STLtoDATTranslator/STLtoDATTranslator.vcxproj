@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Yash Doshi\source\repos\STLtoDATTranslator\STLtoDATTranslator\Header Files;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\yashs\source\repos\cctechyashdoshi\STLtoDATTranslator\STLtoDATTranslator\Header Files;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -132,12 +132,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source Files\FileRead.cpp" />
+    <ClCompile Include="Source Files\FileWrite.cpp" />
+    <ClCompile Include="Source Files\Point.cpp" />
     <ClCompile Include="Source Files\STLtoDATTranslator.cpp" />
     <ClCompile Include="Source Files\Triangle.cpp" />
+    <ClCompile Include="Source Files\Triangulation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header Files\FileRead.h" />
+    <ClInclude Include="Header Files\FileWrite.h" />
+    <ClInclude Include="Header Files\Point.h" />
     <ClInclude Include="Header Files\Triangle.h" />
+    <ClInclude Include="Header Files\Triangulation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

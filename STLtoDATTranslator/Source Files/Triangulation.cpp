@@ -2,7 +2,7 @@
 
 std::vector<double> Triangulation::getUniqueVertices(){return uniqueVertices;};
 
-std::vector<Triangle> Triangulation::triangulizationDataStructure(){return triangles;};
+std::vector<Triangle> Triangulation::getTriangles(){return triangles;};
 
 void Triangulation::processString(const string& data){
     std::istringstream iss(data);
