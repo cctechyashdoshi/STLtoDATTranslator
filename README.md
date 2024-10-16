@@ -7,7 +7,7 @@ This code allows you to convert `.stl` file into `.dat` file which can be viewed
 This application made using,
 
 1. <b>`C++`</b> 
-2. <b>`Guidence received from Vinayak Sir`</b>
+2. <b>`Guidence received from @vinayaksutar Sir`</b>
 
 
 
