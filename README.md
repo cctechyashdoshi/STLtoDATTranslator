@@ -30,7 +30,7 @@ Run Project from Visual Studio or VSCode
 The tool extracts vertex data from an STL file and saves the coordinates in a .dat file, which can be visualized with tools like Gnuplot or used for further analysis.
 
 ### :octocat: Note:
-I made this website while being a part of Traning and incubation program of CCTech and please feel free to suggest any changes. Thanks!
+I made this website while being a part of Traning and incubation program of CCTech(@vinayaksutar) and please feel free to suggest any changes. Thanks!
 <hr />
 <br />
 
