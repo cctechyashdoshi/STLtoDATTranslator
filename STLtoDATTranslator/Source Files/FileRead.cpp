@@ -1,8 +1,8 @@
-#include "FileRead.h"
 #include <cassert>
 #include <sstream>
+#include "../Header Files/FileRead.h"
 
-#define FILENAME "cube.stl"
+#define FILENAME "../Test cases/cube.stl"
 
 Read::Read() {};
 

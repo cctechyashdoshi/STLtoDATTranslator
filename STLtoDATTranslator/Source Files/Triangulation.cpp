@@ -1,4 +1,4 @@
-#include "Triangulation.h"
+#include "../Header Files/Triangulation.h"
 
 std::vector<double> Triangulation::getUniqueVertices(){return uniqueVertices;};
 

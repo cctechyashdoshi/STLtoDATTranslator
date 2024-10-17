@@ -1,7 +1,7 @@
 #pragma once
 #include<fstream>
 #include<vector>
-#include<triangle.h>
+#include"Triangle.h"
 #include<iomanip>
 
 class Write {

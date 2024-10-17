@@ -1,6 +1,6 @@
-#include "FileWrite.h"
-#include "FileRead.h"
-#include "Triangulation.h"
+#include "../Header Files/FileWrite.h"
+#include "../Header Files/FileRead.h"
+#include "../Header Files/Triangulation.h"
 #include <string>
 
 int main() {
